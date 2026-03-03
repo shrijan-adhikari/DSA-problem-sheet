@@ -1,6 +1,19 @@
 /*problem statement- Write a C program to delete the element at a given 1-based position pos 
 from an array of n integers.Shift remaining elements to the left.*/
 #include <stdio.h>
+void delete (int arr,int n,int k);
+int main ()
+{
+    int arr[100];
+    int arr[]= {1,2,3,4,5,6,7,8,9,10};
+
+}
+
+
+
+
+
+/*#include <stdio.h>
 #include <stdlib.h>
 int main()
 {   int pos;
@@ -26,4 +39,4 @@ int main()
     free (arr);
     return 0;
     
-}
+}*/

@@ -2,29 +2,40 @@
  an array of n integers.rShift existing elements to the right to make space.*/
  
 #include <stdio.h>
-int main() {
-    int n, pos, x;
-    scanf("%d", &n);
-
-    int arr[100];
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+# define  UB 100
+void insert(int arr[],int n,int k,int x );
+int main ()
+{
+    int arr[10]= {1,2,3,4,5,6,7,8,9,10};
+    int n=10;
+    printf("present array = [ ");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d, ",arr[i]);
     }
-    printf("type position");
-    scanf("%d", &pos);
-    printf("Read element to insert");
-    scanf("%d", &x);
-
-    for (int i = n; i >= pos; i--) {
-        arr[i] = arr[i - 1];
+printf("]\n");
+printf("enter in which postion you want to enter element: ");
+int k;
+scanf("%d",&k);
+printf("\nenter element to enter: ");
+int  x;
+scanf("%d", &x);
+insert(arr,n,k,x);
+printf("\nnew array = [");
+ for(int i=0;i<=n;i++)
+    {
+        printf("%d, ",arr[i]);
     }
-
-    arr[pos - 1] = x;
-
-    for (int i = 0; i <= n; i++) {
-        printf("%d ", arr[i]);
-    }
-
-    return 0;
+printf("]\n");
+return 0;
 }
-
+void insert(int arr[],int n,int k,int x)
+{
+int j=n;
+while (j>=k-1)
+{
+    arr[j]=arr[j-1];
+    j--;
+}
+arr[k-1]=x;
+}
