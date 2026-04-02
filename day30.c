@@ -50,7 +50,7 @@ int main() {
     scanf("%d", &n);
     
     for (int i = 0; i < n; i++) {
-        scanf("%d %d", &coeff, &exp);
+        scanf("%d ", &coeff, &exp);
         struct Term* newTerm = createTerm(coeff, exp);
         
         if (head == NULL) {
@@ -60,6 +60,7 @@ int main() {
             tail = newTerm;
         }
     }
+    printf("done");
     
     printPolynomial(head);
     return 0;
