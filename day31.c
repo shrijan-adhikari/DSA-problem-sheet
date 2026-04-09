@@ -60,6 +60,7 @@ int main() {
             display();
         }
     }
+    printf("done")
     
     return 0;
 }
